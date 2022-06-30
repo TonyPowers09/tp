@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="generator" content="cl-yag" />
+    <title>Your website's title. : README</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" media="screen" />
+    <link rel="alternate" type="application/rss+xml" title="Your website's title. : README RSS Feed" href="rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Your website's title. : README RSS Feed Gopher" href="rss-gopher.xml" />
+<!--    <link rel="alternate" type="application/atom+xml" title="Your website's title. : README Atom Feed" href="atom.xml" /> -->
+    <link rel="icon" type="image/x-icon" href="static/img/clyagFav.ico" />
+  </head>
+
+    <body>
+    <div id="wrapper">
+      <header>
+	<nav class="pure-menu pure-menu-horizontal">
+	  <!--<a href="#"></a>-->
+	    <ul class="pure-menu-list">
+	      <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
+	      <li class="pure-menu-item"><a href="index-titles.html" class="pure-menu-link">All Posts</a></li>
+	      <li class="pure-menu-item"><a href="rss.xml" class="pure-menu-link">RSS</a></li>
+	     </ul>
+	</nav>
+	<div>All Tags: 
+<span><a href="tag-pony.html">#pony</a></span>
+
+
+<span><a href="tag-cl-yag.html">#cl-yag</a></span>
+
+</div>
+      </header>
+
+      <main>
+<article id="20171202">
+  <header>
+  
+    <h1><a href="2017-12-02-README.html">README</a></h1>
+    <p>Written by <em>lambda</em>, on 02 December 2017.<br/>Tags: 
+<span><a href="tag-cl-yag.html">#cl-yag</a></span>
+
+</p>
+  </header>
+  <h1 id="readme">README</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>cl-yag is a lightweight, static site generator that produces
+<strong>gopher</strong> sites as well as <strong>html</strong> websites. The name &#8216;cl-yag&#8217;
+stands for &#8216;Common Lisp - Yet Another website Generator&#8217;. It runs
+without needing Quicklisp (Common LISP library manager).</p>
+
+<h2 id="showcase">Showcase</h2>
+
+<p>I am using cl-yag to create and maintain my websites in the
+world-wide-web (visit: <em>[Solene&#8217;s percent]
+(https://dataswamp.org/<sub>solene</sub>/)</em>) as well as [in gopher-space]
+(gopher://dataswamp.org/1/<sub>solene</sub>/).</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>To use cl-yag you&#8217;ll need:</p>
+
+<ol>
+<li>A Common Lisp Interpreter
+
+<ul>
+<li>cl-yag&#8217;s current default is <a href="http://www.sbcl.org/">Steel Bank Common Lisp (SBCL)</a>.</li>
+<li><a href="https://common-lisp.net/project/ecl/">Embeddable Common Lisp (ECL)</a> will do fine as well.</li>
+</ul></li>
+<li>A Markdown-to-HTML Converter
+
+<ul>
+<li>cl-yag&#8217;s current default is <a href="http://fletcherpenney.net/multimarkdown/">multimarkdown</a>.</li>
+</ul></li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<p>Go into your project&#8217;s directory and type <code>make</code>. You&#8217;ll find your new website/gopher page in <strong>output/</strong>.<br />
+If you want to get rid of everything in your <strong>output/</strong> subdirectories, type <code>make clean</code>.<br />
+For further commands: read the Makefile.<br />
+Read in the follwing section where to find it.</p>
+
+<h2 id="overview:cl-yagsfilehierarchy">Overview: cl-yag&#8217;s File Hierarchy</h2>
+
+<p>After cloning the repository, your project&#8217;s directory should contain at
+least the following files and folders:</p>
+
+<pre><code>.
+|-- LICENSE
+|-- Makefile
+|-- README.md
+|-- data/
+|   |-- 1.md
+|   |-- README.md
+|   `-- articles.lisp
+|-- generator.lisp
+|-- output/
+|   |-- gopher/
+|   `-- html/
+|-- static/
+|   |-- css/style.css
+|   `-- img/
+`-- templates/
+	|-- article.tpl
+	|-- gopher_head.tpl
+	|-- layout.tpl
+	|-- one-tag.tpl
+	|-- rss-item.tpl
+	`-- rss.tpl
+</code></pre>
+
+<ul>
+<li><strong>Makefile</strong>
+
+<ul>
+<li>This file exists to simplifiy the recurring execution of frequently used commands.</li>
+</ul></li>
+<li><strong>generator.lisp</strong>
+
+<ul>
+<li>This is cl-yag&#8217;s core library.</li>
+</ul></li>
+<li><strong>static/</strong>
+
+<ul>
+<li>This directory holds content, that needs to be published without being changed (e.g. stylesheets, js-scripts).</li>
+<li>If you come from &#8216;non-static CMS&#8217;-Country: <strong>static/</strong> holds, what you would put in your <strong>assets/</strong> directory.</li>
+</ul></li>
+<li><strong>templates/</strong>
+
+<ul>
+<li>The templates in this directory provide the structural skeleton(s) of the webpages and feeds you want to create.</li>
+</ul></li>
+<li><strong>output/</strong>
+
+<ul>
+<li>cl-yag puts in this directory everything ready to get deployed.</li>
+<li>Because cl-yag generates not only HTML, but gopher-compliant pages as well, <strong>output/</strong> <strong>holds two subdirectories</strong>.
+
+<ul>
+<li><strong>gopher/</strong> contains the website for gopher,</li>
+<li><strong>html/</strong> contains the website in HTML.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>And there is the <strong>data/</strong> directory, which is important enough to get a subsubsection of its own.</p>
+
+<h3 id="thedatadirectory">The data/ Directory</h3>
+
+<p>This directory is crucial for the usage of cl-yag.</p>
+
+<p><strong>data/</strong> contains</p>
+
+<ul>
+<li>the <strong>articles.lisp</strong> configuration file, which defines important metadata for posts and pages.</li>
+<li>It also holds <strong>${id}.md</strong> files, which are holding your posts' (or pages') content. You can use markdown to write them.</li>
+</ul>
+
+<p>For more information: Read section &#8216;Configuration&#8217;.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>cl-yag&#8217;s main configuration file is <strong>data/articles.lisp</strong>.<br />
+In order to have a running implementation of cl-yag, you have
+to set most of the values in this file.</p>
+
+<p><strong>data/articles.lisp</strong> has two parts:</p>
+
+<ol>
+<li>A variable called <em>config</em>. Its values define your webpage.</li>
+<li>&#8220;posts&#8221; declaration with their metadata</li>
+</ol>
+
+<p>Values are assigned by placing a string (e.g. <code>&quot;foo&quot;</code>) or a boolean
+(i.e. <code>t</code> or <code>nil</code>) behind a keyword (e.g. <code>:title</code>).</p>
+
+<h3 id="theconfigvariable">The <em>config</em> Variable</h3>
+
+<p>The <em>config</em> variable is used to assign the following values:</p>
+
+<ul>
+<li><strong>:webmaster</strong>
+
+<ul>
+<li>The name of the default(!) author.</li>
+<li><code>:webmaster</code> gets used, if <code>:author</code> is omitted. (See below: &#8216;The <strong>articles</strong> variable&#8217;.)</li>
+</ul></li>
+<li><strong>:title</strong>
+
+<ul>
+<li>The title of the webpage</li>
+</ul></li>
+<li><strong>:description</strong>
+
+<ul>
+<li>This text is used in the <em>description</em> field of the atom/rss feed.</li>
+</ul></li>
+<li><strong>:url</strong>
+
+<ul>
+<li>This needs to be the full(!) URL of your website, including(!) a final slash.</li>
+<li>MIND: If the url contains a tilde (~), it needs to get duplicated.</li>
+<li>Example: <code>https://mydomain/~~user/</code></li>
+</ul></li>
+<li><strong>:rss-item-number</strong>
+
+<ul>
+<li>This holds the number of latest(!) RSS items you want to get published.</li>
+</ul></li>
+<li><strong>html</strong>
+
+<ul>
+<li><code>t</code> to export html website. Set <code>nil</code> to disable.</li>
+</ul></li>
+<li><strong>gopher</strong>
+
+<ul>
+<li><code>t</code> to export gopher website. Set <code>nil</code> to disable.</li>
+</ul></li>
+<li><strong>gopher-path</strong>
+
+<ul>
+<li>This is the full path of the directory to access your gopher hole.</li>
+</ul></li>
+<li><strong>gopher-server</strong>
+
+<ul>
+<li>Hostname of the gopher server. It needs to be included in each link.</li>
+</ul></li>
+<li><strong>gopher-port</strong>
+
+<ul>
+<li>tcp port of the gopher server. 70 is the default port. It needs to be included in each link.</li>
+</ul></li>
+<li><strong>gopher-format</strong>
+
+<ul>
+<li>format of the gopher server. default is the geomyidae format, gophernicus format is commented.</li>
+</ul></li>
+<li><strong>gopher-index</strong>
+
+<ul>
+<li>name of the gopher menu file. defaut is index.gph for geomyidae, gophermap file is commented.</li>
+</ul></li>
+</ul>
+
+<h3 id="postsdeclarations">Posts declarations</h3>
+
+<p>Each post is declared with its metadata using the function &#8220;post&#8221;.
+So you need to add a new line for each of your posts.</p>
+
+<p>Of the following keywords, only <code>:author</code> and <code>:short</code> can be omitted.</p>
+
+<ul>
+<li><strong>:author</strong>
+
+<ul>
+<li>The <code>:author</code> field is used to display the article&#8217;s author.</li>
+<li>If you omit it, the generator will take the name from the <code>:webmaster</code> field of the <em>config</em> variable.</li>
+</ul></li>
+<li><strong>:id</strong>
+
+<ul>
+<li>The <code>:id</code> field holds the filename of your post/page.</li>
+<li>Example: <code>:id &quot;2&quot;</code> will load file <strong>data/2.md</strong>. Use text instead of numbers, if you want to.</li>
+<li>(See section: &#8216;The <strong>data/</strong> Directory&#8217;.)</li>
+</ul></li>
+<li><strong>:tag</strong>
+
+<ul>
+<li><code>:tag</code> field is used to create a &#8220;view&#8221; containing all articles of the same tag.</li>
+<li>MIND: Whitespaces are used to separate tags and are not allowed in(!) tags.</li>
+</ul></li>
+<li><strong>:tiny</strong>
+
+<ul>
+<li>The <code>:tiny</code> field&#8217;s value is used for displaying a really short description of the posts content on your homepage.</li>
+<li>If <code>:tiny</code> doesn&#8217;t get a value, the full article gets displayed.</li>
+<li>Hint: Use <code>:tiny &quot;Read the full article for more information.&quot;</code>, if you don&#8217;t want to display the full text of an article on your index site.</li>
+</ul></li>
+<li><strong>:title</strong>
+
+<ul>
+<li>The <code>:title</code> field&#8217;s value sets your post&#8217;s title, its first headline, as well as its entry on the index.html.</li>
+</ul></li>
+</ul>
+
+<h2 id="howtocreateanewpost">Howto Create A New Post</h2>
+
+<p>Edit <strong>data/articles.lisp</strong> and add a new list to the <em>articles</em> variable:</p>
+
+<pre><code>(list :title &quot;How do I use cl-yag&quot; 
+	  :id &quot;2&quot;
+	  :date &quot;29 April 2016&quot; 
+	  :author &quot;Solène&quot;
+	  :tiny &quot;Read more about how I use cl-yag.&quot; 
+	  :tag &quot;example help code&quot;)
+</code></pre>
+
+<p>Then write a corresponding <strong>data/2.md</strong> file, using markdown.</p>
+
+<h2 id="howtopublishapost">Howto Publish A Post</h2>
+
+<p>I prepared a Makefile to facilitate the process of generating and
+publishing your static sites.
+All you need to do in order to publish is to go into your cl-yag
+directory and type <code>make</code>.</p>
+
+<p>The make command creates html and gopher files in the defined location.
+The default is the <strong>output/</strong> directory, but you can use a symbolic link
+pointing to some other directory as well.</p>
+
+<h2 id="howtoaddanewpage">Howto Add A New Page</h2>
+
+<p>You may want to have some dedicated pages besides the index or a post.
+To create one, edit the <em>generate-site</em> function in cl-yag&#8217;s
+<strong>generator.lisp</strong> and add a function call, like this:</p>
+
+<pre><code>(generate &quot;somepage.html&quot; (load-file &quot;data/mypage.html&quot;))
+</code></pre>
+
+<p>This will produce <strong>output/html/somepage.html</strong>.</p>
+
+<h2 id="furthercustomization">Further Customization</h2>
+
+<h3 id="howtouseanothercommonlispinterpreter">Howto Use Another Common Lisp Interpreter</h3>
+
+<p>cl-yags default Lisp interpreter is <strong>sbcl</strong>. If you want to use a
+different interpreter you need to set the variable <em>LISP</em> to the name
+of your binary, when calling <code>make</code>:</p>
+
+<pre><code>make LISP=ecl
+</code></pre>
+
+<h3 id="usinggithooksforpublishing">Using git Hooks For Publishing</h3>
+
+<p>You may customize your publishing-process further, e.g. by using a git
+hook to call the make program after each change in the repo so your
+website gets updated automatically.</p>
+
+<h2 id="page-includes">Page-Includes</h2>
+
+<p>Here is an example code, if you want to include another page in the template:</p>
+
+<ol>
+<li><p>Create <strong>templates/panel.tpl</strong> containing the html you want to include.</p></li>
+<li><p>Add a replacement-string in the target file, where the replacement should occur.<br />
+In this case, we choose <strong>%%Panel%%</strong> for a string, and, because we want the panel to be displayed on each page, we add this string to <strong>templates/layout.tpl</strong>.</p></li>
+<li><p>Modify the function <em>generate-layout</em> in cl-yag&#8217;s <strong>generator.lisp</strong> accordingly.<br />
+This is done by adding the following template function call:</p>
+
+<pre><code>(template &quot;%%Panel%%&quot; (load-file &quot;templates/panel.tpl&quot;))
+</code></pre></li>
+</ol>
+
+<p>Another valid approach is to writer your html directly into <strong>templates/layout.tpl</strong>.</p>
+
+<h2 id="knownlimitations">Known Limitations</h2>
+
+<h3 id="usetocreate">Use ~~ To Create ~</h3>
+
+<p>cl-yag crashes if you use a single &#8220;~&#8221; character inside
+<strong>templates/articles.lisp</strong>, because Common Lisp employs the tilde as a
+prefix to indicate format specifiers in format strings.</p>
+
+<p>In order to use a literal <code>~</code> &#8211; e.g. for creating a <code>:title</code> or
+<code>:url</code> reference &#8211; you have to <em>escape</em> the tilde <em>by
+duplicating</em> it: <code>~~</code>. (See <code>:url</code> in section &#8216;Configuration&#8217;).</p>
+
+<h3 id="postingwithouttagging">Posting Without Tagging</h3>
+
+<p>cl-yag allows posts without tags, but, using the default
+<strong>templates/layout.tpl</strong>, you&#8217;ll get a line below your title that
+displays: &quot;Tags: &quot;.</p>
+
+<p>(Note: If you are looking for a way to contribute this may be a task for you.)</p>
+
+<h3 id="anoteonthemes">A Note On Themes</h3>
+
+<p>Although cl-yag may ship with a minimalistic template, cl-yag focuses
+on generating html- and gopher-compliant structural markup - not
+themed layouts.</p>
+
+<p>If you want some deeply refined, cross-browser compatible, responsive,
+webscale style sheets, you need to create them yourself. However,
+cl-yag will work nicely with them and if you want to make your
+style sheets a part of cl-yag you&#8217;re very welcome to contact me.</p>
+
+<h1 id="hackingcl-yag">Hacking cl-yag</h1>
+
+<p>I tried to make cl-yag easy to extend.<br />
+If you want to contribute, feel free to contact me and/or to send in a patch.</p>
+
+<ul>
+<li>If you are looking for a way to contribute:
+
+<ul>
+<li>You could find a way to &#8220;sanitize&#8221; cl-yag&#8217;s behaviour regarding the tilde (see: above);</li>
+<li>Also see: &#8216;Note&#8217; in &#8216;Posting Without Tagging&#8217;;</li>
+<li>Also see: &#8216;A Note On Themes&#8217;.</li>
+</ul></li>
+</ul>
+
+
+</article>
+
+</main>
+
+      <footer><p>This blog is powered by cl-yag!</p></footer>
+
+    </div><!-- #wrapper -->
+  </body>
+</html>
