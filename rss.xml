@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your website's title.</title>
+    <title>Thoughtful Penguin dot com</title>
     <description>Yet another website on the net</description>
-    <link>https://my.website/~user/</link>
-    <atom:link href="https://my.website/~user/rss.xml" rel="self" type="application/rss+xml" />
+    <link>https://://tonypowers09.github.io/~tp/</link>
+    <atom:link href="https://://tonypowers09.github.io/~tp/rss.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>test</title>
   <description>
@@ -13,12 +13,12 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2f24658">1. test title</a></li>
+<li><a href="#org19c9afe">1. test title</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2f24658" class="outline-2">
-<h2 id="org2f24658"><span class="section-number-2">1.</span> test title</h2>
+<div id="outline-container-org19c9afe" class="outline-2">
+<h2 id="org19c9afe"><span class="section-number-2">1.</span> test title</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 org mode text
@@ -32,8 +32,8 @@ org mode text
 
     ]]>
   </description>
-  <guid>https://my.website/~user/2017-12-14-t.html</guid>
-  <link>https://my.website/~user/2017-12-14-t.html</link>
+  <guid>https://://tonypowers09.github.io/~tp/2017-12-14-t.html</guid>
+  <link>https://://tonypowers09.github.io/~tp/2017-12-14-t.html</link>
   <pubDate>Thu, 14 Dec 2017 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -157,8 +157,8 @@ corresponding paths and filenames in <strong>generator.lisp</strong>.</p>
 
     ]]>
   </description>
-  <guid>https://my.website/~user/2017-12-02-css.html</guid>
-  <link>https://my.website/~user/2017-12-02-css.html</link>
+  <guid>https://://tonypowers09.github.io/~tp/2017-12-02-css.html</guid>
+  <link>https://://tonypowers09.github.io/~tp/2017-12-02-css.html</link>
   <pubDate>Sat, 02 Dec 2017 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -530,8 +530,8 @@ If you want to contribute, feel free to contact me and/or to send in a patch.</p
 
     ]]>
   </description>
-  <guid>https://my.website/~user/2017-12-02-README.html</guid>
-  <link>https://my.website/~user/2017-12-02-README.html</link>
+  <guid>https://://tonypowers09.github.io/~tp/2017-12-02-README.html</guid>
+  <link>https://://tonypowers09.github.io/~tp/2017-12-02-README.html</link>
   <pubDate>Sat, 02 Dec 2017 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -544,9 +544,21 @@ If you want to contribute, feel free to contact me and/or to send in a patch.</p
 
     ]]>
   </description>
-  <guid>https://my.website/~user/2016-04-29-1.html</guid>
-  <link>https://my.website/~user/2016-04-29-1.html</link>
+  <guid>https://://tonypowers09.github.io/~tp/2016-04-29-1.html</guid>
+  <link>https://://tonypowers09.github.io/~tp/2016-04-29-1.html</link>
   <pubDate>Fri, 29 Apr 2016 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>second post</title>
+  <description>
+    <![CDATA[
+<h1 id="secondpost">Second Post</h1>
+
+    ]]>
+  </description>
+  <guid>https://://tonypowers09.github.io/~tp/2022-07-01-2.html</guid>
+  <link>https://://tonypowers09.github.io/~tp/2022-07-01-2.html</link>
+  <pubDate>Fri, 01 Jul 2022 00:00:00 GMT</pubDate>
 </item>
 
   </channel>
